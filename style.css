@@ -60,7 +60,9 @@ color: #fff;
 }
 .slider-nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 1.5rem;
+    position: relative;
 }
 .slider-nav__pul{
     display: flex;
@@ -78,4 +80,33 @@ border: rgb(189, 189, 189) 3px solid;
 .slider .slider-nav .pul.active{
 background-color: rgb(189, 189, 189);
 
+}
+.slider-nav__arrow a{
+    font-size: 24px;
+    font-weight: 700;
+    color: #839194;
+    text-decoration: none;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.slider-nav__arrow a:hover{
+background-color: rgba(255, 255, 255, 0.096);
+}
+/* .slider-nav__prev{
+   
+  
+} */
+
+.slider-nav__next{
+    
+    right: 0;
+    z-index: 3;
+   
 }

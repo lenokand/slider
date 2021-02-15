@@ -32,7 +32,7 @@ prevBt.onclick = function(e){
 
     if(activeSlide == 0) activeSlide = slides.length
 
-    activeSlide--
+    activeSlide--//номер последнго элемента = длина-1, тк массив начинается с нуля
 
     showSlide()
 }
