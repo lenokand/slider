@@ -1,12 +1,33 @@
 const slides = document.querySelectorAll('.slider-items__slide')
 const prevBt = document.querySelector('.slider-nav__prev')
 const nextBt = document.querySelector('.slider-nav__next')
-const Puls = document.querySelectorAll('.pul') //массив элементов пульки
+
 
 
 let activeSlide = 0
+
+
 // let activePul = 0 // счетчик активной пульки
 
+
+    function GeneratePul(){
+        for (let i = 0; i < slides.length ; i++)
+        {   
+            if (i === 0 ) {
+                document.querySelector(".slider-nav__pul").innerHTML +='<a href="#" class="pul  active"></a>'
+                i++
+        }
+
+            document.querySelector(".slider-nav__pul").innerHTML += '<a href="#" class="pul"></a>'
+               
+        }
+       
+    }
+    GeneratePul()
+    const Puls = document.querySelectorAll('.pul') //массив элементов пульки
+
+   
+    
 function showSlide(){
     if (document.querySelector('.slider-items__slide.active'))
     {
