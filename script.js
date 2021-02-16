@@ -13,7 +13,7 @@ let activeSlide = 0
     function GeneratePul(){
         for (let i = 0; i < slides.length ; i++) {   
             if (i === 0 ) {
-                document.querySelector(".slider-nav__pul").innerHTML +='<a href="#" class="pul  active"></a>'
+                document.querySelector(".slider-nav__pul").innerHTML +='<a href="#" class="pul active"></a>'
                 i++
                 }
 
@@ -55,6 +55,7 @@ prevBt.onclick = function(e){
     activeSlide--//номер последнго элемента = длина-1, тк массив начинается с нуля
 
     showSlide()
+    console.log('<', activeSlide )
 }
 
 nextBt.onclick = function(e){
@@ -66,6 +67,7 @@ nextBt.onclick = function(e){
     
 
     showSlide()
+    console.log('>', activeSlide )
 }
 
 
@@ -85,10 +87,20 @@ Puls.forEach((pul, i) => {
             activeSlide = i
             
         }
-        console.log(activeSlide , i)
+        console.log('пульки', activeSlide )
         showSlide()
     }
 
 })
 
+
+// авто переключение
+setInterval(function(){
+    activeSlide++
+
+    if(activeSlide === slides.length) activeSlide = 0
+   
+    showSlide()
+    console.log("авто переключение" , activeSlide)
+}, 2500)
 
