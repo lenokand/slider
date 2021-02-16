@@ -11,12 +11,11 @@ let activeSlide = 0
 
 
     function GeneratePul(){
-        for (let i = 0; i < slides.length ; i++)
-        {   
+        for (let i = 0; i < slides.length ; i++) {   
             if (i === 0 ) {
                 document.querySelector(".slider-nav__pul").innerHTML +='<a href="#" class="pul  active"></a>'
                 i++
-        }
+                }
 
             document.querySelector(".slider-nav__pul").innerHTML += '<a href="#" class="pul"></a>'
                

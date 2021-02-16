@@ -96,6 +96,7 @@ background-color: rgb(141, 141, 141);
     justify-content: center;
     
 }
+
 .slider-nav__arrow a:hover{
 background-color: rgba(255, 255, 255, 0.096);
 }
